@@ -18,8 +18,8 @@ cd /etc/ssh
 cp sshd_config sshd_config.bak
 
 # Editează fișierul sshd_config
-sed -i 's/#PermitRootLogin/PermitRootLogin yes/' sshd_config
-sed -i 's/#PasswordAuthentication/PasswordAuthentication yes/' sshd_config
+sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' sshd_config
+sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/' sshd_config
 sed -i 's/ChallengeResponseAuthentication no/ChallengeResponseAuthentication yes/' sshd_config
 
 # Salvează modificările
